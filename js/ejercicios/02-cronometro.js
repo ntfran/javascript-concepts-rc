@@ -1,5 +1,5 @@
-const horas = parseInt(
+const horas = parseFloat(
   prompt("Ingresar cantidad de horas a convertir en minutos"),
 );
-let minutos = horas * 60
-console.log(horas +' hora/s equivalen a '+ minutos +' minutos')
+const minutos = horas * 60
+alert(horas +' hora/s equivalen a '+ minutos +' minutos');
