@@ -3,7 +3,7 @@
 let numeroLimite = prompt(
   "Ingresar un número del 1 al 50 para armar la pirámide:",
 );
-if (input !== null) {
+if (numeroLimite !== null) {
   while (
     isNaN(numeroLimite) ||
     numeroLimite === "" ||
@@ -17,7 +17,7 @@ if (input !== null) {
     numeroLimite = parseInt(numeroLimite);
     for (let fila = 1; fila <= numeroLimite; fila++) {
       for (let columna = 1; columna <= fila; columna++) {
-        document.write(fila);
+        document.write(columna);
       }
       document.write("<br>");
     }
