@@ -49,8 +49,7 @@ canciones.splice(3, 0, "Dai dai (2026)");
 
 mostrarCanciones();
 
-canciones.shift()
-canciones.shift()
+canciones.shift();
 
 mostrarCanciones();
 
@@ -58,7 +57,20 @@ canciones.pop();
 
 mostrarCanciones();
 
-canciones.splice(4,1)
+canciones.splice(4, 1);
 /* canciones.splice(4) //ESTE CASO BORRA TODOS LOS ELEMENTOS DESDE LA POSICION 4 */
 
+mostrarCanciones();
+
+/* Modificar un elemento del array */
+canciones[0] = "DNA (2026)";
+mostrarCanciones();
+
+/* Otros metodos para trabajar con arrays */
+canciones.push(
+  "Goals (2026)",
+  "Lighter (2026)",
+  "Champions (2026)",
+  "Echo (2026)",
+);
 mostrarCanciones();
