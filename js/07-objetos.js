@@ -1,7 +1,8 @@
 const mostrarObjeto = () => {
   datosObjeto += "<h3>Recorremos todo el objeto</h3>";
   for (let clave in cancion) {
-    datosObjeto += `<p>${clave}: ${cancion[clave]}</p>`;
+    if (typeof cancion[clave] !== "function")
+      datosObjeto += `<p>${clave}: ${cancion[clave]}</p>`;
   }
   pantalla.innerHTML = datosObjeto;
 };
@@ -18,6 +19,15 @@ const cancion = {
   album: "Sale el Sol",
   anioPublicacion: 2010,
   /* METODOS */
+  reproducir: function () {
+    this 
+    const texto = `Comenzo la reproduccion de la cancion ${this.nombreCancion}`;
+    pantalla.innerHTML += texto;
+  },
+  pausa: () => {
+    const texto = `Se pauso la reproduccion de la cancion`;
+    pantalla.innerHTML += texto;
+  },
 };
 
 console.log(cancion);
@@ -45,3 +55,19 @@ pantalla.innerHTML = datosObjeto;
 cancion.publicado = true;
 
 mostrarObjeto();
+
+/* Modificar el valor de una propiedad */
+
+cancion.publicado = false;
+
+mostrarObjeto();
+
+/* Borrar una propiedad */
+delete cancion.anioPublicacion;
+mostrarObjeto();
+
+/* Como se usan los metodos */
+
+cancion.reproducir();
+
+cancion.pausa();
